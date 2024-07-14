@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Route</string>
+    <string name="what_do_you_search_for">What do you search for?</string>
+    <string name="egp_1_200">EGP 1.200</string>
+    <string name="egp_1_500">EGP 1.500</string>
+    <string name="review">Review</string>
+
 </resources>
