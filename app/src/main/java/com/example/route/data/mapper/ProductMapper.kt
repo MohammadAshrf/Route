@@ -1,7 +1,7 @@
 package com.example.route.data.mapper
 
 import com.example.common.mapper.Mapper
-import com.example.route.data.models.ProductDto
+import com.example.route.data.models.dto.ProductDto
 import com.example.route.domain.models.Dimensions
 import com.example.route.domain.models.Meta
 import com.example.route.domain.models.Product
@@ -9,7 +9,7 @@ import com.example.route.domain.models.Reviews
 import java.math.BigDecimal
 import java.math.RoundingMode
 
-object ProductMapper : Mapper<ProductDto, Product, Unit>() {
+internal object ProductMapper : Mapper<ProductDto, Product, Unit>() {
     override fun dtoToDomain(model: ProductDto): Product {
         val price = model.price ?: 0.0
         val discountPercentage = model.discountPercentage ?: 0.0
@@ -34,9 +34,9 @@ object ProductMapper : Mapper<ProductDto, Product, Unit>() {
             sku = model.sku.orEmpty(),
             weight = model.weight ?: 0,
             dimensions = Dimensions(
-                width = model.dimensions?.width ?: 0.0,
-                height = model.dimensions?.height ?: 0.0,
-                depth = model.dimensions?.depth ?: 0.0
+                width = model.dimensionsDto?.width ?: 0.0,
+                height = model.dimensionsDto?.height ?: 0.0,
+                depth = model.dimensionsDto?.depth ?: 0.0
             ),
             warrantyInformation = model.warrantyInformation.orEmpty(),
             shippingInformation = model.shippingInformation.orEmpty(),
@@ -53,10 +53,10 @@ object ProductMapper : Mapper<ProductDto, Product, Unit>() {
             returnPolicy = model.returnPolicy.orEmpty(),
             minimumOrderQuantity = model.minimumOrderQuantity ?: 0,
             meta = Meta(
-                createdAt = model.meta?.createdAt.orEmpty(),
-                updatedAt = model.meta?.updatedAt.orEmpty(),
-                barcode = model.meta?.barcode.orEmpty(),
-                qrCode = model.meta?.qrCode.orEmpty()
+                createdAt = model.metaDto?.createdAt.orEmpty(),
+                updatedAt = model.metaDto?.updatedAt.orEmpty(),
+                barcode = model.metaDto?.barcode.orEmpty(),
+                qrCode = model.metaDto?.qrCode.orEmpty()
             ),
             images = model.images.orEmpty(),
             thumbnail = model.thumbnail.orEmpty()
