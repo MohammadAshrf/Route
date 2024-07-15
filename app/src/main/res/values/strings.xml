@@ -4,5 +4,10 @@
     <string name="egp_1_200">EGP 1.200</string>
     <string name="egp_1_500">EGP 1.500</string>
     <string name="review">Review</string>
-
+    <string name="egp">EGP</string>
+    <string name="network_unavailable">Please check your internet!</string>
+    <string name="timeout_error">Timed out. Please try again later!</string>
+    <string name="unsupported_type">Unsupported type…</string>
+    <string name="review_format">Review (%.1f)</string>
+    <string name="product_title">Product Title</string>
 </resources>
