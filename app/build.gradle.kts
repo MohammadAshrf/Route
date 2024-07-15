@@ -61,8 +61,10 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata)
     implementation(libs.androidx.lifecycle.runtime)
 
-    // Material
-    implementation(libs.material)
+    // ViewModel
+    implementation(libs.androidx.lifecycle.livedata.ktx.v262)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v262)
 
     // Kotlin Reflect
     implementation(libs.kotlin.reflect)
@@ -74,6 +76,9 @@ dependencies {
     // GSON
     implementation(libs.google.gson)
 
+    //Glide
+    implementation(libs.glide)
+
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
@@ -84,4 +89,10 @@ dependencies {
     kapt(libs.google.hilt.android.compiler)
     kapt(libs.hilt.compiler)
     kapt(libs.google.hilt.android.compiler)
+
+    // MockK
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockk.agent)
+    testImplementation(libs.kotlinx.coroutines.test)
 }
