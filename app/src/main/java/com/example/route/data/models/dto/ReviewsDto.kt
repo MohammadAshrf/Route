@@ -1,8 +1,8 @@
-package com.example.route.data.models
+package com.example.route.data.models.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class ReviewsItem(
+data class ReviewsDto(
 	@field:SerializedName("date") val date: String? = null,
 	@field:SerializedName("reviewerName") val reviewerName: String? = null,
 	@field:SerializedName("reviewerEmail") val reviewerEmail: String? = null,
