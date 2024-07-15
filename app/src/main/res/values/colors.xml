@@ -5,7 +5,8 @@
     <color name="colorPrimary">#004182</color>
     <color name="colorPrimaryDark">#012A52</color>
     <color name="transparent">#00000000</color>
-    <color name="grey">#808080</color>
+    <color name="grey">#5A004182</color>
     <color name="textPrimary">#06004F</color>
     <color name="emailColor">#9906004F</color>
+    <color name="stroke_color">#4D004182</color>
 </resources>
